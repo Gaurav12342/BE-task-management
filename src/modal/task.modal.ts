@@ -25,7 +25,7 @@ const taskSchema = new Schema<ITaskSchema>(
     },
     status: {
       type: String,
-      required: true,
+      required: false,
       trim: true,
     },
   },

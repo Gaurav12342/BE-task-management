@@ -5,6 +5,7 @@ export const createTaskSchema = joi.object({
   description: joi.string().required(),
   dueDate: joi.string().required(),
   priority: joi.string().required(),
+  status: joi.string().required(),
 });
 
 export const updateTaskSchema = joi.object({
@@ -13,4 +14,5 @@ export const updateTaskSchema = joi.object({
   description: joi.string().required(),
   dueDate: joi.string().required(),
   priority: joi.string().required(),
+  status: joi.string().required(),
 });
