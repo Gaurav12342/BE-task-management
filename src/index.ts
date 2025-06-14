@@ -5,6 +5,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import userRoute from "./routes/user.route";
 import taskRoute from "./routes/task.route";
+import { errorMiddleware } from "./middleware/errorMiddleware";
 
 config();
 
@@ -21,6 +22,8 @@ app.use("/task", taskRoute);
 app.get("/", (req: Request, res: Response) => {
   res.send("Hello, Good Morning");
 });
+
+app.use(errorMiddleware);
 
 const startServer = async () => {
   try {

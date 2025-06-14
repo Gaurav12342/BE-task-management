@@ -3,6 +3,7 @@ export interface ITaskSchema {
   description?: string;
   dueDate?: string;
   priority?: string;
+  status?: string;
 }
 
 export interface ITaskUpdateSchema {
@@ -11,4 +12,5 @@ export interface ITaskUpdateSchema {
   description?: string;
   dueDate?: string;
   priority?: string;
+  status?: string;
 }

@@ -1,0 +1,292 @@
+{
+	"info": {
+		"_postman_id": "2f0c1268-30fe-4871-92de-32559bf257fe",
+		"name": "Task-Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13460035"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/user/sign-up",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fname\" : \"Gaurav1\",\n    \"lname\" : \"Patel\",\n    \"email\" : \"abc1@gmail.com\",\n    \"password\" : \"admin@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/user/sign-up",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/user/sign-in",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"abc@gmail.com\",\n    \"password\" : \"admin@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/user/sign-in",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"sign-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/task/lists?page=2&limit=5&sort=desc&search=Gaurav4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjY4NGFkZmFjODM3NzYwYTA1Nzg1ZWI4YyIsImZuYW1lIjoiR2F1cmF2OCIsImxuYW1lIjoiUGF0ZWwiLCJlbWFpbCI6ImFiY0BnbWFpbC5jb20iLCJjcmVhdGVkQXQiOiIyMDI1LTA2LTEyVDE0OjA5OjQ4LjMxMloiLCJ1cGRhdGVkQXQiOiIyMDI1LTA2LTEyVDE0OjA5OjQ4LjMxMloiLCJfX3YiOjB9LCJpYXQiOjE3NDk3OTE1MzMsImV4cCI6MTc0OTc5NTEzM30.lAPY1Twy2dmK6uU78zObQwSQs9hZiSpvhBr-7NZB2bg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"abc@gmail.com\",\n    \"password\" : \"admin@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/task/lists?page=2&limit=5&sort=desc&search=Gaurav4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"task",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						},
+						{
+							"key": "sort",
+							"value": "desc"
+						},
+						{
+							"key": "search",
+							"value": "Gaurav4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/task/create",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjY4NGFkZmFjODM3NzYwYTA1Nzg1ZWI4YyIsImZuYW1lIjoiR2F1cmF2OCIsImxuYW1lIjoiUGF0ZWwiLCJlbWFpbCI6ImFiY0BnbWFpbC5jb20iLCJjcmVhdGVkQXQiOiIyMDI1LTA2LTEyVDE0OjA5OjQ4LjMxMloiLCJ1cGRhdGVkQXQiOiIyMDI1LTA2LTEyVDE0OjA5OjQ4LjMxMloiLCJfX3YiOjB9LCJpYXQiOjE3NDk3OTE1MzMsImV4cCI6MTc0OTc5NTEzM30.lAPY1Twy2dmK6uU78zObQwSQs9hZiSpvhBr-7NZB2bg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Gaurav10\",\n    \"description\": \"test data 9\",\n    \"dueDate\": \"2025-06-13T04:14:42.967Z\",\n    \"priority\": \"High\",\n    \"status\" : \"Incomplete\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/task/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"task",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/task/list/684ba60a6041fb12eb1d67f0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjY4NGFkZmFjODM3NzYwYTA1Nzg1ZWI4YyIsImZuYW1lIjoiR2F1cmF2OCIsImxuYW1lIjoiUGF0ZWwiLCJlbWFpbCI6ImFiY0BnbWFpbC5jb20iLCJjcmVhdGVkQXQiOiIyMDI1LTA2LTEyVDE0OjA5OjQ4LjMxMloiLCJ1cGRhdGVkQXQiOiIyMDI1LTA2LTEyVDE0OjA5OjQ4LjMxMloiLCJfX3YiOjB9LCJpYXQiOjE3NDk3OTE1MzMsImV4cCI6MTc0OTc5NTEzM30.lAPY1Twy2dmK6uU78zObQwSQs9hZiSpvhBr-7NZB2bg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"abc@gmail.com\",\n    \"password\" : \"admin@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/task/list/684ba60a6041fb12eb1d67f0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"task",
+						"list",
+						"684ba60a6041fb12eb1d67f0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/task/delete/684baaff89594e59d1c7dd89",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjY4NGFkZmFjODM3NzYwYTA1Nzg1ZWI4YyIsImZuYW1lIjoiR2F1cmF2OCIsImxuYW1lIjoiUGF0ZWwiLCJlbWFpbCI6ImFiY0BnbWFpbC5jb20iLCJjcmVhdGVkQXQiOiIyMDI1LTA2LTEyVDE0OjA5OjQ4LjMxMloiLCJ1cGRhdGVkQXQiOiIyMDI1LTA2LTEyVDE0OjA5OjQ4LjMxMloiLCJfX3YiOjB9LCJpYXQiOjE3NDk3OTE1MzMsImV4cCI6MTc0OTc5NTEzM30.lAPY1Twy2dmK6uU78zObQwSQs9hZiSpvhBr-7NZB2bg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"abc@gmail.com\",\n    \"password\" : \"admin@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/task/delete/684baaff89594e59d1c7dd89",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"task",
+						"delete",
+						"684baaff89594e59d1c7dd89"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/task/update",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"684ba60a6041fb12eb1d67f0\",\n    \"title\": \"Gaurav100000000001111\",\n    \"description\": \"test data 1\",\n    \"dueDate\": \"2025-06-13T04:14:42.967Z\",\n    \"priority\": \"High\",\n    \"status\" : \"Incomplete\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/task/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"task",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
